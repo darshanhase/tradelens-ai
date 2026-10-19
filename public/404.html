@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // GitHub Pages SPA fallback: any deep link that 404s bounces to the app
+      // root with the original path preserved in the query string, and
+      // index.html routes the app there on boot (see main.tsx).
+      (function () {
+        var l = window.location;
+        l.replace(
+          l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") +
+          l.pathname.split("/").slice(0, -1).join("/") + "/?/" +
+          l.pathname.slice(1) + l.search + l.hash
+        );
+      })();
+    </script>
+    <title>TradeLens AI</title>
+  </head>
+  <body></body>
+</html>

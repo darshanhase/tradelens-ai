@@ -1,0 +1,2 @@
+# SPA fallback so direct page refreshes never 404 (Netlify)
+/*    /index.html   200

@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  :root.light {
+    color-scheme: light;
+  }
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-surface-950 text-slate-200 antialiased font-sans text-sm;
+  }
+  :root.light body {
+    @apply bg-slate-100 text-slate-800;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-900 border border-line-900 rounded-lg;
+  }
+  :root.light .card {
+    @apply bg-white border-slate-200;
+  }
+  .card-title {
+    @apply text-[13px] font-medium text-slate-300 tracking-wide uppercase;
+  }
+  :root.light .card-title {
+    @apply text-slate-500;
+  }
+  .input {
+    @apply bg-surface-850 border border-line-500 rounded px-2 py-1.5 text-sm text-slate-200 outline-none focus:border-accent focus:ring-1 focus:ring-accent/40;
+  }
+  :root.light .input {
+    @apply bg-white border-slate-300 text-slate-800;
+  }
+  .btn {
+    @apply inline-flex items-center gap-1.5 rounded px-3 py-1.5 text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-blue-500;
+  }
+  :root.light .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-500;
+  }
+  .btn-ghost {
+    @apply btn bg-surface-800 border border-line-700 text-slate-300 hover:border-line-500 hover:text-slate-100;
+  }
+  :root.light .btn-ghost {
+    @apply bg-white border-slate-300 text-slate-600 hover:text-slate-900 hover:border-slate-400;
+  }
+  .btn-danger {
+    @apply btn bg-red-900/40 border border-red-800/60 text-red-300 hover:bg-red-900/60;
+  }
+  .btn-danger-solid {
+    @apply btn bg-red-600 text-white hover:bg-red-500;
+  }
+  .cell-input {
+    @apply w-full h-full bg-transparent px-2 py-1 text-sm text-slate-200 outline-none border border-transparent focus:bg-surface-700 focus:border-accent focus:ring-0 min-w-0;
+  }
+  :root.light .cell-input {
+    @apply text-slate-800 focus:bg-slate-100;
+  }
+  .table-head {
+    @apply text-[11px] uppercase tracking-wider text-muted font-medium;
+  }
+  .sidebar-link {
+    @apply flex items-center gap-2.5 rounded px-3 py-2 text-sm text-slate-400 hover:bg-surface-800 hover:text-slate-200 transition-colors;
+  }
+  :root.light .sidebar-link {
+    @apply text-slate-500 hover:bg-slate-200/60 hover:text-slate-800;
+  }
+  .sidebar-link-active {
+    @apply bg-surface-800 text-slate-100 border border-line-700;
+  }
+  :root.light .sidebar-link-active {
+    @apply bg-white text-slate-900 border-slate-300 shadow-sm;
+  }
+}

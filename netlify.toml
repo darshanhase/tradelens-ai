@@ -1,0 +1,9 @@
+# Static site — no build command needed. Deploy the `dist/` folder.
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
